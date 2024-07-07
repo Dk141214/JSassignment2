@@ -1,0 +1,60 @@
+/* Set the default font and layout for the body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+#featured {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+}
+
+/* Remove default list styling and set layout for thumbnails */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+li img {
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 2px solid transparent; /* Transparent border */
+    transition: border-color 0.3s, filter 0.3s; /* Smooth transition for hover effects */
+}
+
+li img:hover,
+li img.active {
+    border-color: #007BFF; /* Blue border on hover or active */
+    filter: grayscale(0%); /* Remove grayscale on hover or active */
+}
+
+/* Apply grayscale filter to inactive thumbnails */
+li img {
+    filter: grayscale(100%);
+}
